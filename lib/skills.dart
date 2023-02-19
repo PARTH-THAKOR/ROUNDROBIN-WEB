@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:pie_chart/pie_chart.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:websiteroundrobin/contact.dart';
 import 'package:websiteroundrobin/projects.dart';
 import 'package:websiteroundrobin/services.dart';
@@ -131,7 +132,15 @@ class SkillsPage extends StatelessWidget {
                                   height: 50,
                                 ),
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    var url = Uri.parse(
+                                        "https://docs.google.com/document/d/1hGzNad7ydyitCqlIvyBN01EIbuP07mu2oq4A636_wqM/edit?usp=drivesdk");
+                                    if (await canLaunchUrl(url)) {
+                                      await launchUrl(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
+                                  },
                                   style: ButtonStyle(
                                       overlayColor:
                                           const MaterialStatePropertyAll(

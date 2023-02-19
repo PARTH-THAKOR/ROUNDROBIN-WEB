@@ -338,7 +338,15 @@ pageTwoLeftSideContainer(BuildContext context) {
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () async {
+                  var url = Uri.parse(
+                      "https://docs.google.com/document/d/1hGzNad7ydyitCqlIvyBN01EIbuP07mu2oq4A636_wqM/edit?usp=drivesdk");
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 style: ButtonStyle(
                     overlayColor:
                         const MaterialStatePropertyAll(Colors.deepOrange),
@@ -1061,7 +1069,8 @@ pageEndBottamSheet(BuildContext context) {
         ),
         AnimatedTextKit(
           animatedTexts: [
-            TyperAnimatedText('Copyright © 2023 roundrobin.netlify.com March-2023/+3:23 UTC',
+            TyperAnimatedText(
+                'Copyright © 2023 roundrobin.netlify.com March-2023/+3:23 UTC',
                 textAlign: TextAlign.center,
                 textStyle: const TextStyle(
                   fontSize: 17,
