@@ -168,10 +168,8 @@ class ProjectsPage extends StatelessWidget {
                                 ),
                                 ElevatedButton(
                                   onPressed: () async {
-                                    var url = Uri(
-                                        scheme: 'mailto',
-                                        path:
-                                        "developers.roundrobin@gmail.com");
+                                    var url = Uri.parse(
+                                        "https://github.com/PARTH-THAKOR/ChatOFi");
                                     if (await canLaunchUrl(url)) {
                                       await launchUrl(url);
                                     } else {
@@ -322,7 +320,13 @@ class ProjectsPage extends StatelessWidget {
                                 ),
                                 ElevatedButton(
                                   onPressed: () async {
-                                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+                                    var url = Uri.parse(
+                                        "https://github.com/PARTH-THAKOR/ROUNDROBIN-WEB");
+                                    if (await canLaunchUrl(url)) {
+                                      await launchUrl(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
                                   },
                                   style: ButtonStyle(
                                       overlayColor:
