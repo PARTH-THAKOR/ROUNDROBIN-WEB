@@ -1056,5 +1056,20 @@ pageEndBottamSheet(BuildContext context) {
           ],
           totalRepeatCount: 1,
         ),
+        const SizedBox(
+          height: 20,
+        ),
+        AnimatedTextKit(
+          animatedTexts: [
+            TyperAnimatedText('Copyright © 2023 roundrobin.netlify.com March-2023/+3:23 UTC',
+                textAlign: TextAlign.center,
+                textStyle: const TextStyle(
+                  fontSize: 17,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                )),
+          ],
+          totalRepeatCount: 1,
+        ),
       ]);
 }
