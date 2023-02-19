@@ -56,7 +56,7 @@ class ProjectsPage extends StatelessWidget {
               Column(children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.5,
-                  height: MediaQuery.of(context).size.height*1.2,
+                  height: MediaQuery.of(context).size.height * 1.2,
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Container(
@@ -84,13 +84,16 @@ class ProjectsPage extends StatelessWidget {
                               children: [
                                 Container(
                                   width: MediaQuery.of(context).size.width / 6,
-                                  height: MediaQuery.of(context).size.height / 3,
+                                  height:
+                                      MediaQuery.of(context).size.height / 3,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      border: Border.all(color: Colors.cyanAccent, width: 4)),
+                                      border: Border.all(
+                                          color: Colors.cyanAccent, width: 4)),
                                   child: FittedBox(
                                     child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(40000),
+                                      borderRadius:
+                                          BorderRadius.circular(40000),
                                       child: image,
                                     ),
                                   ),
@@ -138,20 +141,26 @@ class ProjectsPage extends StatelessWidget {
                                   height: 50,
                                 ),
                                 ElevatedButton(
-                                  onPressed: () {
-
+                                  onPressed: () async {
+                                    var url = Uri.parse(
+                                        "https://drive.google.com/file/d/15QxCTKKddfZCWZx5-mpc6OuGcejpSmhb/view?usp=drivesdk");
+                                    if (await canLaunchUrl(url)) {
+                                      await launchUrl(url);
+                                    } else {
+                                      throw 'Could not launch $url';
+                                    }
                                   },
                                   style: ButtonStyle(
                                       overlayColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.deepOrange),
+                                          const MaterialStatePropertyAll(
+                                              Colors.deepOrange),
                                       backgroundColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.cyanAccent),
+                                          const MaterialStatePropertyAll(
+                                              Colors.cyanAccent),
                                       shape: MaterialStateProperty.all(
                                           RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(27)))),
+                                                  BorderRadius.circular(27)))),
                                   child: const Padding(
                                     padding: EdgeInsets.all(20.0),
                                     child: Text(
@@ -178,15 +187,15 @@ class ProjectsPage extends StatelessWidget {
                                   },
                                   style: ButtonStyle(
                                       overlayColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.deepOrange),
+                                          const MaterialStatePropertyAll(
+                                              Colors.deepOrange),
                                       backgroundColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.cyanAccent),
+                                          const MaterialStatePropertyAll(
+                                              Colors.cyanAccent),
                                       shape: MaterialStateProperty.all(
                                           RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(27)))),
+                                                  BorderRadius.circular(27)))),
                                   child: const Padding(
                                     padding: EdgeInsets.all(20.0),
                                     child: Text(
@@ -208,21 +217,22 @@ class ProjectsPage extends StatelessWidget {
               Column(children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.5,
-                  height: MediaQuery.of(context).size.height*1.2,
+                  height: MediaQuery.of(context).size.height * 1.2,
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Container(
                       decoration: BoxDecoration(
                           color: Colors.black,
                           border:
-                          Border.all(color: Colors.cyanAccent, width: 4),
+                              Border.all(color: Colors.cyanAccent, width: 4),
                           borderRadius: BorderRadius.circular(50)),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           AnimatedTextKit(
                             animatedTexts: [
-                              TypewriterAnimatedText('Portfolio Website (This)...',
+                              TypewriterAnimatedText(
+                                  'Portfolio Website (This)...',
                                   textStyle: const TextStyle(
                                     fontSize: 35,
                                     color: Colors.greenAccent,
@@ -236,13 +246,16 @@ class ProjectsPage extends StatelessWidget {
                               children: [
                                 Container(
                                   width: MediaQuery.of(context).size.width / 6,
-                                  height: MediaQuery.of(context).size.height / 3,
+                                  height:
+                                      MediaQuery.of(context).size.height / 3,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      border: Border.all(color: Colors.cyanAccent, width: 4)),
+                                      border: Border.all(
+                                          color: Colors.cyanAccent, width: 4)),
                                   child: FittedBox(
                                     child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(40000),
+                                      borderRadius:
+                                          BorderRadius.circular(40000),
                                       child: image2,
                                     ),
                                   ),
@@ -264,8 +277,7 @@ class ProjectsPage extends StatelessWidget {
                                 ),
                                 AnimatedTextKit(
                                   animatedTexts: [
-                                    TypewriterAnimatedText(
-                                        '> by Flutter Web',
+                                    TypewriterAnimatedText('> by Flutter Web',
                                         textStyle: const TextStyle(
                                           fontSize: 25,
                                           color: Colors.white,
@@ -291,19 +303,23 @@ class ProjectsPage extends StatelessWidget {
                                 ),
                                 ElevatedButton(
                                   onPressed: () async {
-                                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+                                    Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const HomeScreen()));
                                   },
                                   style: ButtonStyle(
                                       overlayColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.deepOrange),
+                                          const MaterialStatePropertyAll(
+                                              Colors.deepOrange),
                                       backgroundColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.cyanAccent),
+                                          const MaterialStatePropertyAll(
+                                              Colors.cyanAccent),
                                       shape: MaterialStateProperty.all(
                                           RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(27)))),
+                                                  BorderRadius.circular(27)))),
                                   child: const Padding(
                                     padding: EdgeInsets.all(20.0),
                                     child: Text(
@@ -330,15 +346,15 @@ class ProjectsPage extends StatelessWidget {
                                   },
                                   style: ButtonStyle(
                                       overlayColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.deepOrange),
+                                          const MaterialStatePropertyAll(
+                                              Colors.deepOrange),
                                       backgroundColor:
-                                      const MaterialStatePropertyAll(
-                                          Colors.cyanAccent),
+                                          const MaterialStatePropertyAll(
+                                              Colors.cyanAccent),
                                       shape: MaterialStateProperty.all(
                                           RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(27)))),
+                                                  BorderRadius.circular(27)))),
                                   child: const Padding(
                                     padding: EdgeInsets.all(20.0),
                                     child: Text(
