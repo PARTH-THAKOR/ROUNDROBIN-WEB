@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
             animatedTexts: [
               FadeAnimatedText('Welcome !'),
               FadeAnimatedText('The world of ...'),
-              TypewriterAnimatedText('ROUNDROBIN',
+              TypewriterAnimatedText('  ROUNDROBIN',
                   textStyle: const TextStyle(
                     fontSize: 60,
                     fontWeight: FontWeight.bold,

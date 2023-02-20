@@ -27,7 +27,27 @@ class HomeScreen extends StatelessWidget {
               ])
             : Container(),
       ),
-      body: const HomeScreenBody(),
+      body: (MediaQuery.of(context).size.width > 1200 &&
+              MediaQuery.of(context).size.height > 580)
+          ? const HomeScreenBody()
+          : Center(
+              child: Container(
+                color: Colors.black,
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                        ' Set Desktop site mode or Increase the size of screen',
+                        textAlign: TextAlign.center,
+                        textStyle: const TextStyle(
+                          fontSize: 30,
+                          color: Colors.cyanAccent,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ],
+                  totalRepeatCount: 1,
+                ),
+              ),
+            ),
     );
   }
 }

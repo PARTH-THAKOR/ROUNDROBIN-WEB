@@ -46,13 +46,14 @@ class ContactPage extends StatelessWidget {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.8,
+            height: MediaQuery.of(context).size.height,
             color: Colors.black,
             child: Row(
               children: [
                 pageFourLeftSideContainer(context),
                 Container(
                   margin: const EdgeInsets.only(top: 70),
+                  height: MediaQuery.of(context).size.height * 0.8,
                   decoration: BoxDecoration(
                       color: Colors.black,
                       border: Border.all(color: Colors.cyanAccent, width: 4),
