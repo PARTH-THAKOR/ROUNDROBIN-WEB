@@ -1,6 +1,8 @@
 // THE WEBSITE PROJECT OF ROUNDROBIN
 
 import 'package:flutter/material.dart';
+import 'package:websiteroundrobin/appbar.dart';
+import 'package:websiteroundrobin/contact.dart';
 import 'package:websiteroundrobin/splashscreen.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class WebRoundRobin extends StatelessWidget {
     return const MaterialApp(
       title: "ROUNDROBIN",
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: HomeScreen(),
     );
   }
 }

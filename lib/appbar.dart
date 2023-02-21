@@ -15,40 +15,175 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
         backgroundColor: Colors.black,
-        automaticallyImplyLeading: false,
-        title: (MediaQuery.of(context).size.width > 1200)
-            ? Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-                appBarTitle(),
-                centreAppBarButtons(context),
-                traillingAppBarButtons(),
-              ])
-            : Container(),
-      ),
-      body: (MediaQuery.of(context).size.width > 1200 &&
-              MediaQuery.of(context).size.height > 580)
-          ? const HomeScreenBody()
-          : Center(
-              child: Container(
-                color: Colors.black,
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                        ' Set Desktop site mode or maximize the screen',
-                        textAlign: TextAlign.center,
-                        textStyle: const TextStyle(
-                          fontSize: 30,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          automaticallyImplyLeading: false,
+          title: (MediaQuery.of(context).size.width > 1200 &&
+                  MediaQuery.of(context).size.height > 580)
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                      appBarTitle(),
+                      centreAppBarButtons(context),
+                      traillingAppBarButtons(),
+                    ])
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                      AnimatedTextKit(totalRepeatCount: 1, animatedTexts: [
+                        TyperAnimatedText(
+                          "    ROUNDROBIN",
+                          textStyle: const TextStyle(
+                              color: Colors.cyanAccent,
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              decorationColor: Colors.cyanAccent),
+                        ),
+                      ]),
+                      PopupMenuButton(
+                          icon: const Icon(
+                            Icons.more_vert,
+                            color: Colors.cyanAccent,
+                          ),
                           color: Colors.cyanAccent,
-                          fontWeight: FontWeight.bold,
-                        )),
-                  ],
-                  totalRepeatCount: 1,
-                ),
-              ),
-            ),
-    );
+                          itemBuilder: (context) => [
+                                PopupMenuItem(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const AboutPage()));
+                                    },
+                                    child: ListTile(
+                                      tileColor: Colors.cyanAccent,
+                                      title: const Text("Home",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      onTap: () {
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const HomeScreen()));
+                                      },
+                                    )),
+                                PopupMenuItem(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const AboutPage()));
+                                    },
+                                    child: ListTile(
+                                      tileColor: Colors.cyanAccent,
+                                      title: const Text("About",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      onTap: () {
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const AboutPage()));
+                                      },
+                                    )),
+                                PopupMenuItem(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ProjectsPage()));
+                                    },
+                                    child: ListTile(
+                                      tileColor: Colors.cyanAccent,
+                                      title: const Text("Projects",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      onTap: () {
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const ProjectsPage()));
+                                      },
+                                    )),
+                                PopupMenuItem(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const SkillsPage()));
+                                    },
+                                    child: ListTile(
+                                      tileColor: Colors.cyanAccent,
+                                      title: const Text("Skills",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      onTap: () {
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const SkillsPage()));
+                                      },
+                                    )),
+                                PopupMenuItem(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ServicesPage()));
+                                    },
+                                    child: ListTile(
+                                      tileColor: Colors.cyanAccent,
+                                      title: const Text("Services",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      onTap: () {
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const ServicesPage()));
+                                      },
+                                    )),
+                                PopupMenuItem(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ContactPage()));
+                                    },
+                                    child: ListTile(
+                                      tileColor: Colors.cyanAccent,
+                                      title: const Text("Contacts",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      onTap: () {
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const ContactPage()));
+                                      },
+                                    )),
+                              ]),
+                    ]),
+        ),
+        body: const HomeScreenBody());
   }
 }
 
