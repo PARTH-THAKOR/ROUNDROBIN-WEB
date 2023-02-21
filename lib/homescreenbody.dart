@@ -1071,7 +1071,7 @@ pageEndBottamSheet(BuildContext context) {
         AnimatedTextKit(
           animatedTexts: [
             TyperAnimatedText(
-                'Copyright © 2023 roundrobin.netlify.com March-2023/+3:23 UTC',
+                'Copyright © 2023 developers-roundrobin.netlify.app March-2023/+3:23 UTC',
                 textAlign: TextAlign.center,
                 textStyle: const TextStyle(
                   fontSize: 17,

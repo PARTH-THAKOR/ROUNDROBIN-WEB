@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                 child: AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText(
-                        ' Set Desktop site mode or Increase the size of screen',
+                        ' Set Desktop site mode or maximize the screen',
                         textAlign: TextAlign.center,
                         textStyle: const TextStyle(
                           fontSize: 30,
