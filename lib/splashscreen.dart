@@ -21,13 +21,13 @@ class SplashScreen extends StatelessWidget {
               FadeAnimatedText('The world of ...'),
               TypewriterAnimatedText('  ROUNDROBIN',
                   textStyle: const TextStyle(
-                    fontSize: 57,
+                    fontSize: 50,
                     fontWeight: FontWeight.bold,
                   )),
             ],
             totalRepeatCount: 1,
             onFinished: () {
-              Navigator.pushReplacement(context,
+              Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomeScreen()));
             },
           ),

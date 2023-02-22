@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Colors.black,
           automaticallyImplyLeading: false,
           title: (MediaQuery.of(context).size.width > 1200 &&
-                  MediaQuery.of(context).size.height > 580)
+                  MediaQuery.of(context).size.height > 579)
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [

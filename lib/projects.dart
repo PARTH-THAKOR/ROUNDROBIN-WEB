@@ -405,371 +405,392 @@ class ProjectsPage extends StatelessWidget {
                 ),
               ],
             )
-          : ListView(
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(top: 20),
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.2,
-                  color: Colors.black,
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        AnimatedTextKit(
-                          animatedTexts: [
-                            TypewriterAnimatedText('  My Projects...',
-                                textStyle: const TextStyle(
-                                  fontSize: 45,
-                                  color: Colors.cyanAccent,
-                                  fontWeight: FontWeight.bold,
-                                )),
-                          ],
-                          totalRepeatCount: 1,
-                        ),
-                      ]),
-                ),
-                Column(children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 1.4,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          : (MediaQuery.of(context).size.width > 260 &&
+                  MediaQuery.of(context).size.height > 490)
+              ? ListView(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 20),
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      color: Colors.black,
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             AnimatedTextKit(
                               animatedTexts: [
-                                TypewriterAnimatedText('ChatOFi...',
+                                TypewriterAnimatedText('  My Projects...',
                                     textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
+                                      fontSize: 45,
+                                      color: Colors.cyanAccent,
                                       fontWeight: FontWeight.bold,
                                     )),
                               ],
                               totalRepeatCount: 1,
                             ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    height: MediaQuery.of(context).size.height *
-                                        0.4,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                            color: Colors.cyanAccent,
-                                            width: 4)),
-                                    child: FittedBox(
-                                      child: ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(40000),
-                                        child: image,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Chatting Hybrid\n   Application',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> by Flutter Framework',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Technologies : Flutter\n   + Firebase + Zegocloud',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () async {
-                                      var url = Uri.parse(
-                                          "https://drive.google.com/file/d/15QxCTKKddfZCWZx5-mpc6OuGcejpSmhb/view?usp=drivesdk");
-                                      if (await canLaunchUrl(url)) {
-                                        await launchUrl(url);
-                                      } else {
-                                        throw 'Could not launch $url';
-                                      }
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "Download",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () async {
-                                      var url = Uri.parse(
-                                          "https://github.com/PARTH-THAKOR/ChatOFi");
-                                      if (await canLaunchUrl(url)) {
-                                        await launchUrl(url);
-                                      } else {
-                                        throw 'Could not launch $url';
-                                      }
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "Github Project Link",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  )
-                                ]),
-                          ],
-                        ),
-                      ),
+                          ]),
                     ),
-                  ),
-                ]),
-                Column(children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 1.4,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TypewriterAnimatedText(
-                                    'Portfolio Website\n(This)...',
-                                    textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
-                                      fontWeight: FontWeight.bold,
-                                    )),
+                    Column(children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText('ChatOFi...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.5,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.4,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.cyanAccent,
+                                                width: 4)),
+                                        child: FittedBox(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(40000),
+                                            child: image,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Chatting Hybrid\n   Application',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> by Flutter Framework',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Technologies : Flutter\n   + Firebase + Zegocloud',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://drive.google.com/file/d/15QxCTKKddfZCWZx5-mpc6OuGcejpSmhb/view?usp=drivesdk");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Download",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://github.com/PARTH-THAKOR/ChatOFi");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Github Project Link",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      )
+                                    ]),
                               ],
-                              totalRepeatCount: 1,
                             ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    height: MediaQuery.of(context).size.height *
-                                        0.4,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                            color: Colors.cyanAccent,
-                                            width: 4)),
-                                    child: FittedBox(
-                                      child: ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(40000),
-                                        child: image2,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Portfolio Web\n   Application',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> by Flutter Web',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Technologies : Flutter\n   Web + netlify.com ',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () async {
-                                      Navigator.pushReplacement(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const HomeScreen()));
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "Website Link",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () async {
-                                      var url = Uri.parse(
-                                          "https://github.com/PARTH-THAKOR/ROUNDROBIN-WEB");
-                                      if (await canLaunchUrl(url)) {
-                                        await launchUrl(url);
-                                      } else {
-                                        throw 'Could not launch $url';
-                                      }
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "Github Project Link",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  )
-                                ]),
-                          ],
+                          ),
                         ),
                       ),
+                    ]),
+                    Column(children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'Portfolio Website\n(This)...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.5,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.4,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.cyanAccent,
+                                                width: 4)),
+                                        child: FittedBox(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(40000),
+                                            child: image2,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Portfolio Web\n   Application',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> by Flutter Web',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Technologies : Flutter\n   Web + netlify.com ',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          Navigator.pushReplacement(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const HomeScreen()));
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Website Link",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://github.com/PARTH-THAKOR/ROUNDROBIN-WEB");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Github Project Link",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      )
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+                    Container(
+                      margin: const EdgeInsets.only(top: 100),
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * 0.43,
+                      color: Colors.black,
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            pageEndBottamSheet(context),
+                          ]),
+                    ),
+                  ],
+                )
+              : Container(
+                  color: Colors.black,
+                  child: const Center(
+                    child: Text(
+                      "Desktop view only for this site",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.cyanAccent),
                     ),
                   ),
-                ]),
-                Container(
-                  margin: const EdgeInsets.only(top: 100),
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.43,
-                  color: Colors.black,
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        pageEndBottamSheet(context),
-                      ]),
                 ),
-              ],
-            ),
     );
   }
 }

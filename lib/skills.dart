@@ -626,589 +626,612 @@ class SkillsPage extends StatelessWidget {
                 ),
               ],
             )
-          : ListView(
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(top: 20),
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.2,
+          : (MediaQuery.of(context).size.width > 260 &&
+                  MediaQuery.of(context).size.height > 490)
+              ? ListView(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 20),
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      color: Colors.black,
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            AnimatedTextKit(
+                              animatedTexts: [
+                                TypewriterAnimatedText('  My Skills...',
+                                    textStyle: const TextStyle(
+                                      fontSize: 45,
+                                      color: Colors.cyanAccent,
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                              ],
+                              totalRepeatCount: 1,
+                            ),
+                          ]),
+                    ),
+                    Column(children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.98,
+                        height: MediaQuery.of(context).size.height * 0.8,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'Development\nSkills...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Hybrid Application\n   Development',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Java Backend\n   Development',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Web Development',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> WebApps Development',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://docs.google.com/document/d/1hGzNad7ydyitCqlIvyBN01EIbuP07mu2oq4A636_wqM/edit?usp=drivesdk");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Download CV",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.98,
+                        height: MediaQuery.of(context).size.height * 0.6,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'Programming\nLanguages...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText('> Java',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText('> Python',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText('> C & C++',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText('> JavaScript',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText('> Dart',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText('> Kotlin',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.98,
+                        height: MediaQuery.of(context).size.height * 0.6,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'What technologies\nI learnt...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Flutter Framework',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Spring Framework',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText('> SpringBoot',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> MySQL & Other Databases',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> React Js Framework',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              )),
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.98,
+                        height: MediaQuery.of(context).size.height * 0.7,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'Skills by\nPriority...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        child: pieChart(context),
+                                      )
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.98,
+                        height: MediaQuery.of(context).size.height * 0.7,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText('My Projects...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> I made my projects\n   with using Flutter,\n    SpringBoot, React\n   and others...',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const ProjectsPage()));
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "My Projects",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.98,
+                        height: MediaQuery.of(context).size.height * 0.8,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'Contact & Services...',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> If you like my\n   skills and projects\n   then keep connected with me\n   and my services.',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const ContactPage()));
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Contacts",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const ServicesPage()));
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.deepOrange),
+                                            backgroundColor:
+                                                const MaterialStatePropertyAll(
+                                                    Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "My Services",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 60),
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 0.4,
+                        color: Colors.black,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              pageEndBottamSheet(context),
+                            ]),
+                      ),
+                    ]),
+                  ],
+                )
+              : Container(
                   color: Colors.black,
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        AnimatedTextKit(
-                          animatedTexts: [
-                            TypewriterAnimatedText('  My Skills...',
-                                textStyle: const TextStyle(
-                                  fontSize: 45,
-                                  color: Colors.cyanAccent,
-                                  fontWeight: FontWeight.bold,
-                                )),
-                          ],
-                          totalRepeatCount: 1,
-                        ),
-                      ]),
+                  child: const Center(
+                    child: Text(
+                      "Desktop view only for this site",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.cyanAccent),
+                    ),
+                  ),
                 ),
-                Column(children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.98,
-                    height: MediaQuery.of(context).size.height * 0.8,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TypewriterAnimatedText('Development\nSkills...',
-                                    textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                              totalRepeatCount: 1,
-                            ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Hybrid Application\n   Development',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Java Backend\n   Development',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Web Development',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> WebApps Development',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () async {
-                                      var url = Uri.parse(
-                                          "https://docs.google.com/document/d/1hGzNad7ydyitCqlIvyBN01EIbuP07mu2oq4A636_wqM/edit?usp=drivesdk");
-                                      if (await canLaunchUrl(url)) {
-                                        await launchUrl(url);
-                                      } else {
-                                        throw 'Could not launch $url';
-                                      }
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "Download CV",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  ),
-                                ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.98,
-                    height: MediaQuery.of(context).size.height * 0.6,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TypewriterAnimatedText(
-                                    'Programming\nLanguages...',
-                                    textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                              totalRepeatCount: 1,
-                            ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> Java',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> Python',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> C & C++',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> JavaScript',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> Dart',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> Kotlin',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.98,
-                    height: MediaQuery.of(context).size.height * 0.6,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TypewriterAnimatedText(
-                                    'What technologies\nI learnt...',
-                                    textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                              totalRepeatCount: 1,
-                            ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Flutter Framework',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> Spring Framework',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText('> SpringBoot',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> MySQL & Other Databases',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> React Js Framework',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          )),
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.98,
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TypewriterAnimatedText('Skills by\nPriority...',
-                                    textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                              totalRepeatCount: 1,
-                            ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    child: pieChart(context),
-                                  )
-                                ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.98,
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TypewriterAnimatedText('My Projects...',
-                                    textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                              totalRepeatCount: 1,
-                            ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> I made my projects\n   with using Flutter,\n    SpringBoot, React\n   and others...',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const ProjectsPage()));
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "My Projects",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  ),
-                                ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.98,
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            border:
-                                Border.all(color: Colors.cyanAccent, width: 4),
-                            borderRadius: BorderRadius.circular(50)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            AnimatedTextKit(
-                              animatedTexts: [
-                                TypewriterAnimatedText('Contact & Services...',
-                                    textStyle: const TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.greenAccent,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                              totalRepeatCount: 1,
-                            ),
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  AnimatedTextKit(
-                                    animatedTexts: [
-                                      TypewriterAnimatedText(
-                                          '> If you like my\n   skills and projects\n   then keep connected with me\n   and my services.',
-                                          textStyle: const TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ))
-                                    ],
-                                    totalRepeatCount: 1,
-                                  ),
-                                  const SizedBox(
-                                    height: 50,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const ContactPage()));
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "Contacts",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const ServicesPage()));
-                                    },
-                                    style: ButtonStyle(
-                                        overlayColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.deepOrange),
-                                        backgroundColor:
-                                            const MaterialStatePropertyAll(
-                                                Colors.cyanAccent),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        27)))),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Text(
-                                        "My Services",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20,
-                                            color: Colors.black),
-                                      ),
-                                    ),
-                                  ),
-                                ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(top: 60),
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.4,
-                    color: Colors.black,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          pageEndBottamSheet(context),
-                        ]),
-                  ),
-                ]),
-              ],
-            ),
     );
   }
 }
