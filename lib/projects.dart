@@ -13,6 +13,10 @@ class ProjectsPage extends StatelessWidget {
     Image image = Image(image: assetImage);
     AssetImage assetImage2 = const AssetImage('Images/uu.png');
     Image image2 = Image(image: assetImage2);
+    AssetImage assetImage3 = const AssetImage('Images/88.png');
+    Image image3 = Image(image: assetImage3);
+    AssetImage assetImage4 = const AssetImage('Images/oo.png');
+    Image image4 = Image(image: assetImage4);
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -392,6 +396,312 @@ class ProjectsPage extends StatelessWidget {
                     ])
                   ],
                 ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        height: MediaQuery.of(context).size.height * 1.2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText('Hyphen',
+                                        textStyle: const TextStyle(
+                                          fontSize: 35,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width:
+                                        MediaQuery.of(context).size.width /
+                                            6,
+                                        height:
+                                        MediaQuery.of(context).size.height /
+                                            3,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.cyanAccent,
+                                                width: 4)),
+                                        child: FittedBox(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                            BorderRadius.circular(40000),
+                                            child: image3,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Chat API',
+                                              textStyle: const TextStyle(
+                                                fontSize: 25,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> by SpringBoot Framework',
+                                              textStyle: const TextStyle(
+                                                fontSize: 25,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Technologies : SpringBoot + MySQL + Render',
+                                              textStyle: const TextStyle(
+                                                fontSize: 25,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://github.com/PARTH-THAKOR/HYPHEN");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.deepOrange),
+                                            backgroundColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(
+                                                        27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Github Project Link",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      )
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+                    Column(children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        height: MediaQuery.of(context).size.height * 1.2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'Hyphen Desktop',
+                                        textStyle: const TextStyle(
+                                          fontSize: 35,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width:
+                                        MediaQuery.of(context).size.width /
+                                            6,
+                                        height:
+                                        MediaQuery.of(context).size.height /
+                                            3,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.cyanAccent,
+                                                width: 4)),
+                                        child: FittedBox(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                            BorderRadius.circular(40000),
+                                            child: image4,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> API distribution Application',
+                                              textStyle: const TextStyle(
+                                                fontSize: 25,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> by Flutter Windows',
+                                              textStyle: const TextStyle(
+                                                fontSize: 25,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Technologies : Flutter + Firedart ',
+                                              textStyle: const TextStyle(
+                                                fontSize: 25,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://drive.google.com/file/d/1j_qm4w_skuUQWmkgObJ-pp9jn0YXFJLS/view?usp=share_link");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.deepOrange),
+                                            backgroundColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(
+                                                        27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Download",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://github.com/PARTH-THAKOR/Hyphen-Desktop");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.deepOrange),
+                                            backgroundColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(
+                                                        27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Github Project Link",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      )
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ])
+                  ],
+                ),
                 Container(
                   margin: const EdgeInsets.only(top: 70),
                   width: MediaQuery.of(context).size.width,
@@ -748,6 +1058,307 @@ class ProjectsPage extends StatelessWidget {
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Github Project Link",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      )
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+                    Column(children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText('Hyphen',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width:
+                                        MediaQuery.of(context).size.width *
+                                            0.5,
+                                        height:
+                                        MediaQuery.of(context).size.height *
+                                            0.4,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.cyanAccent,
+                                                width: 4)),
+                                        child: FittedBox(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                            BorderRadius.circular(40000),
+                                            child: image3,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Chat API',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> by SpringBoot',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Technologies : SpringBoot\n   + MySQL + Render',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://github.com/PARTH-THAKOR/HYPHEN");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.deepOrange),
+                                            backgroundColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(
+                                                        27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Github Project Link",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      )
+                                    ]),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+                    Column(children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 1.4,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                border: Border.all(
+                                    color: Colors.cyanAccent, width: 4),
+                                borderRadius: BorderRadius.circular(50)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                AnimatedTextKit(
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                        'Hyphen Desktop',
+                                        textStyle: const TextStyle(
+                                          fontSize: 27,
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                  totalRepeatCount: 1,
+                                ),
+                                Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        width:
+                                        MediaQuery.of(context).size.width *
+                                            0.5,
+                                        height:
+                                        MediaQuery.of(context).size.height *
+                                            0.4,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: Colors.cyanAccent,
+                                                width: 4)),
+                                        child: FittedBox(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                            BorderRadius.circular(40000),
+                                            child: image4,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> API distribution\n   Application',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> by Flutter Windows',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      AnimatedTextKit(
+                                        animatedTexts: [
+                                          TypewriterAnimatedText(
+                                              '> Technologies : Flutter\n   + Firedart ',
+                                              textStyle: const TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ],
+                                        totalRepeatCount: 1,
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://drive.google.com/file/d/1j_qm4w_skuUQWmkgObJ-pp9jn0YXFJLS/view?usp=share_link");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.deepOrange),
+                                            backgroundColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(
+                                                        27)))),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Text(
+                                            "Download",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () async {
+                                          var url = Uri.parse(
+                                              "https://github.com/PARTH-THAKOR/Hyphen-Desktop");
+                                          if (await canLaunchUrl(url)) {
+                                            await launchUrl(url);
+                                          } else {
+                                            throw 'Could not launch $url';
+                                          }
+                                        },
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.deepOrange),
+                                            backgroundColor:
+                                            const MaterialStatePropertyAll(
+                                                Colors.cyanAccent),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(
+                                                        27)))),
                                         child: const Padding(
                                           padding: EdgeInsets.all(20.0),
                                           child: Text(

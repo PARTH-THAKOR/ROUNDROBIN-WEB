@@ -69,6 +69,8 @@ flutter:
   - Images/ll.jpg
   - Images/kk.jpg
   - Images/uu.png
+  - Images/oo.png
+  - Images/88.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

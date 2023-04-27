@@ -2009,22 +2009,7 @@ pageEndBottamSheet(BuildContext context) {
       children: [
         AnimatedTextKit(
           animatedTexts: [
-            TypewriterAnimatedText('  ROUNDROBIN',
-                textAlign: TextAlign.center,
-                textStyle: const TextStyle(
-                  fontSize: 50,
-                  color: Colors.cyanAccent,
-                  fontWeight: FontWeight.bold,
-                )),
-          ],
-          totalRepeatCount: 1,
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        AnimatedTextKit(
-          animatedTexts: [
-            TyperAnimatedText(' Development is Love ❣️',
+            TyperAnimatedText(' developers.roundrobin',
                 textAlign: TextAlign.center,
                 textStyle: const TextStyle(
                   fontSize: 30,
@@ -2037,18 +2022,14 @@ pageEndBottamSheet(BuildContext context) {
         const SizedBox(
           height: 20,
         ),
-        AnimatedTextKit(
-          animatedTexts: [
-            TyperAnimatedText(
+        const Text(
                 'Copyright © 2023 developers-roundrobin.netlify.app March-2023/+3:23 UTC',
                 textAlign: TextAlign.center,
-                textStyle: const TextStyle(
+                style: TextStyle(
                   fontSize: 17,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 )),
-          ],
-          totalRepeatCount: 1,
-        ),
+
       ]);
 }
